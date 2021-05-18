@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+hr {
+    height: 2px;
+}
+
+footer h6 {
+    font-size: 1.8rem;
+}
+
+footer i {
+    font-size: 2rem;
+    color:#FFFFFF;
+}
+
+.navbar img {
+    width: 2rem;
+}
+
+#quienessomos i {
+    font-size: 1.8rem;
+}
