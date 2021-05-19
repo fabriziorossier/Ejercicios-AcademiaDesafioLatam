@@ -30,6 +30,14 @@ footer i {
     width: 2rem;
 }
 
+.h-33 {
+    height: 33%;
+}
+
+.popover {
+    background-color: #FFFFFF;
+}
+
 #quienessomos i {
     font-size: 1.8rem;
 }

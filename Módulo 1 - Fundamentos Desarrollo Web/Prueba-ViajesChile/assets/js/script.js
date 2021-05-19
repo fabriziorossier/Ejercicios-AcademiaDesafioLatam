@@ -1,4 +1,5 @@
 $(Document).ready(function() {
+    // Smooth Scroll
     $("a").click(function(event) {
         // alert(this.hash) // DEBUG - Arroja un alert al hacer click en un link con lo que sigue al # en el atributo href del link
         
@@ -18,4 +19,7 @@ $(Document).ready(function() {
             });
         } // Fin del if
     });
+
+    // Popovers
+    $('[data-toggle="popover"]').popover();
 });
