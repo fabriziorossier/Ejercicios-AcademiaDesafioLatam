@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h2>
+                Resultado: <span class="resultado"></span>
+            </h2>
+            <div>
+                <div>
+                    <div>
+                        <label for="">Valor 1</label>
+                        <input id="valor1" type="text">
+                    </div>
+                    <div>
+                        <label for="">Valor 2</label>
+                        <input id="valor2" type="text">
+                    </div>
+                    <div style="display: flex">
+                        <button id="btn-sumar" type="button">
+                            Sumar
+                        </button>
+                        <button id="btn-restar" type="button">
+                            Restar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let resultado = document.querySelector(".resultado");
+        let sumar = document.querySelector("#btn-sumar");
+        let restar = document.querySelector("#btn-restar");
+        
+        sumar.addEventListener("click", (event) => {
+            event.preventDefault();
+            
+            let valor1 = document.querySelector("#valor1").value;
+            let valor2 = document.querySelector("#valor2").value;
+
+            let validacion = validar(valor1, valor2);
+
+            if (validacion == true){
+                let sumatoria = Number(valor1) + Number(valor2);
+                if (Number(sumatoria) < 0){
+                    resultado.innerHTML = "0";
+                }
+                else {
+                    resultado.innerHTML = sumatoria;
+                }
+            }
+        })
+        
+        restar.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            let valor1 = document.querySelector("#valor1").value;
+            let valor2 = document.querySelector("#valor2").value;
+
+            let validacion = validar(valor1, valor2);
+
+            if (validacion == true){
+                let resta = Number(valor1) - Number(valor2);
+                if (Number(resta) < 0){
+                    resultado.innerHTML = "0";
+                }
+                else {
+                    resultado.innerHTML = resta;
+                }
+            }
+        })
+
+        function validar(valor1, valor2){
+            let validacionAprobada = true;
+            let validacion = /^[-+]?\d*\.?\d*(\d+[eE][-+]?)?\d+$/; // Permite signos + y -, decimales, notacion E
+            
+            if (validacion.test(valor1) == false){
+                document.querySelector(".resultado").innerHTML = "Debes ingresar un número valido.";
+                validacionAprobada = false;
+            }
+
+            if (validacion.test(valor2) == false){
+                document.querySelector(".resultado").innerHTML = "Debes ingresar un número valido.";
+                validacionAprobada = false;
+            }
+
+            return validacionAprobada;
+        }
+    </script>
+</body>
+
+</html>
