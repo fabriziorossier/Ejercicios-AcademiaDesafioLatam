@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Raleway, sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+header {
+    background-color: #000000;
+    font-size: 1.5rem;
+}
+
+header h1 {
+    font-weight: 500;
+    padding: 0.8rem 0;
+}
+
+header img {
+    width: 100%;
+}
+
+footer {
+    background-color: #1e1a13;
+    padding: 2rem 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.desc-section {
+    background-color: #000000;
+    padding: 5rem 20%;
+    color: #ffffff;
+}
+
+.desc-section-descripcion {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    font-weight: 300;
+    width: 56%;
+    white-space: normal;
+    margin: 0 10% 0 0;
+}
+
+.desc-section-descripcion p {
+    padding-top: 1rem;
+}
+
+.desc-section img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 33%;
+}
+
+.caracteristicas {
+    background-color: #1e1a13;
+    font-size: 2rem;
+    padding: 4rem 0;
+    justify-content: center;
+}
+
+.caracteristicas h2 {
+    font-weight: 500;
+}
+
+.caracteristica-iguana {
+    display: inline-block;
+    margin: 3rem 4em 0 4rem;
+}
+
+.caracteristica-iguana i {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.caracteristica-iguana h3 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.tipos {
+    background-color: #000000;
+    padding: 4rem 0;
+}
+
+.tipos img {
+    height: 25vh;
+    display: inline-block;
+    margin: 0.5rem 0.5rem;
+}
