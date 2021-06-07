@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Centro Médico Ñuñoa</title>
+</head>
+
+<body>
+    <!-- Seccion - Radiología -->
+    <section>
+        <h1>Estadisticas centro medico ñuñoa</h1>
+        <h2>Atenciones Radiología</h2>
+        <h3>Primera atención: <span id="primeraAtencionRadiologiaPaciente"></span> - <span id="primeraAtencionRadiologiaPrevision"></span> | Última atención: <span id="ultimaAtencionRadiologiaPaciente"></span> - <span id="ultimaAtencionRadiologiaPrevision"></span></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>HORA</th>
+                    <th>ESPECIALISTA</th>
+                    <th>PACIENTE</th>
+                    <th>RUT</th>
+                    <th>PREVISION</th>
+                </tr>
+            </thead>
+            <tbody id="tablaRadiologia">
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Seccion - Traumatología -->
+    <section>
+        <h2>Atenciones Traumatología</h2>
+        <h3>Primera atención: <span id="primeraAtencionTraumatologiaPaciente"></span> - <span id="primeraAtencionTraumatologiaPrevision"></span> | Última atención: <span id="ultimaAtencionTraumatologiaPaciente"></span> - <span id="ultimaAtencionTraumatologiaPrevision"></span></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>HORA</th>
+                    <th>ESPECIALISTA</th>
+                    <th>PACIENTE</th>
+                    <th>RUT</th>
+                    <th>PREVISION</th>
+                </tr>
+            </thead>
+            <tbody id="tablaTraumatologia">
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Seccion - Dental -->
+    <section>
+        <h2>Atenciones Dental</h2>
+        <h3>Primera atención: <span id="primeraAtencionDentalPaciente"></span> - <span id="primeraAtencionDentalPrevision"></span> | Última atención: <span id="ultimaAtencionDentalPaciente"></span> - <span id="ultimaAtencionDentalPrevision"></span></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>HORA</th>
+                    <th>ESPECIALISTA</th>
+                    <th>PACIENTE</th>
+                    <th>RUT</th>
+                    <th>PREVISION</th>
+                </tr>
+            </thead>
+            <tbody id="tablaDental">
+            </tbody>
+        </table>
+    </section>
+
+    <script src="datos.js"></script>
+    <script>
+        // Presentacion - Radiología
+        let primerRadiologia = [...radiologia].shift();
+        let ultimoRadiologia = [...radiologia].pop();
+        document.querySelector("#primeraAtencionRadiologiaPaciente").innerHTML = primerRadiologia.paciente;
+        document.querySelector("#primeraAtencionRadiologiaPrevision").innerHTML = primerRadiologia.prevision;
+        document.querySelector("#ultimaAtencionRadiologiaPaciente").innerHTML = ultimoRadiologia.paciente;
+        document.querySelector("#ultimaAtencionRadiologiaPrevision").innerHTML = ultimoRadiologia.prevision;
+        // Tabla - Radiología
+        radiologia.forEach(({hora, especialista, paciente, rut, prevision}) => {
+            let fila = document.createElement("tr");
+            fila.innerHTML += `
+            <td>${hora}</td>
+            <td>${especialista}</td>
+            <td>${paciente}</td>
+            <td>${rut}</td>
+            <td>${prevision}</td>
+            `;
+            tablaRadiologia.appendChild(fila);
+        });
+
+        // Presentacion - Traumatología
+        let primerTraumatologia = [...traumatologia].shift();
+        let ultimoTraumatologia = [...traumatologia].pop();
+        document.querySelector("#primeraAtencionTraumatologiaPaciente").innerHTML = primerTraumatologia.paciente;
+        document.querySelector("#primeraAtencionTraumatologiaPrevision").innerHTML = primerTraumatologia.prevision;
+        document.querySelector("#ultimaAtencionTraumatologiaPaciente").innerHTML = ultimoTraumatologia.paciente;
+        document.querySelector("#ultimaAtencionTraumatologiaPrevision").innerHTML = ultimoTraumatologia.prevision;
+        // Tabla - Traumatología
+        traumatologia.forEach(({hora, especialista, paciente, rut, prevision}) => {
+            let fila = document.createElement("tr");
+            fila.innerHTML += `
+            <td>${hora}</td>
+            <td>${especialista}</td>
+            <td>${paciente}</td>
+            <td>${rut}</td>
+            <td>${prevision}</td>
+            `;
+            tablaTraumatologia.appendChild(fila);
+        });
+
+        // Presentacion - Dental
+        let primerDental = [...dental].shift();
+        let ultimoDental = [...dental].pop();
+        document.querySelector("#primeraAtencionDentalPaciente").innerHTML = primerDental.paciente;
+        document.querySelector("#primeraAtencionDentalPrevision").innerHTML = primerDental.prevision;
+        document.querySelector("#ultimaAtencionDentalPaciente").innerHTML = ultimoDental.paciente;
+        document.querySelector("#ultimaAtencionDentalPrevision").innerHTML = ultimoDental.prevision;
+        // Tabla - Dental
+        dental.forEach(({hora, especialista, paciente, rut, prevision}) => {
+            let fila = document.createElement("tr");
+            fila.innerHTML += `
+            <td>${hora}</td>
+            <td>${especialista}</td>
+            <td>${paciente}</td>
+            <td>${rut}</td>
+            <td>${prevision}</td>
+            `;
+            tablaDental.appendChild(fila);
+        });
+    </script>
+</body>
+
+</html>
