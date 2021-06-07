@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+hr {
+    height: 2px;
+    border-width: 0;
+}
+
+h1 {
+    font-family: Pattaya;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+h4 span {
+    font-family: Pattaya;
+}
+
+footer h5 {
+    font-size: 2rem;
+    font-family: Pattaya;
+    font-weight: 400;
+}
+
+.text-decoration-underline {
+    text-decoration: underline;
+    padding-bottom: 1rem;
+}
+
+.carousel-item img {
+    width: 15rem;
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
