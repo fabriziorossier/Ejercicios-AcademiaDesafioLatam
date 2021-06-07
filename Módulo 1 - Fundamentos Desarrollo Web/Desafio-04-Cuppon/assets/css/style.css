@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #DDDDDD;
+}
+
+.bg-green {
+    background-color: #28A745;
+}
+
+.precio-normal {
+    font-weight: 300;
+    color: #707070;
+}
+
+.precio-cuppon {
+    color: #28A745;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.card-title {
+    font-weight: 300;
+    color: #212529;
+}
+
+.card-text {
+    font-weight: 300;
+    color: #707070;
+}
+
+.form-placeholder {
+    font-weight: 300;
+    color: #707070;
+}
+
+.card-text-small {
+    font-weight: 300;
+    color: #707070;
+    font-size: 0.8rem;
+}
+
+.footer-text {
+    font-weight: 300;
+    color: #707070;
+}
+
+.text-medium {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.marcador-mapa {
+    font-size: 0.6rem;
+}
