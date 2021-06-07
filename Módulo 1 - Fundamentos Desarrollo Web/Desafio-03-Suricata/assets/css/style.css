@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.big-h2 {
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+.big-h3 {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.bg-pink {
+    background-color: #E83E8C;
+}
+
+.bg-teal {
+    background-color: #17A2B8;
+}
+
+.iconos {
+    font-size: 4.5rem;
+}
+
+.card-title, .card-text, .list-group-item {
+    color: #373A3C;
+}
