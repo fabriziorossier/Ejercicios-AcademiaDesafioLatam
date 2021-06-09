@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#tarjetaSuperHero {
+    margin: auto;
+    width: 80%;
+}
+
+#graficoSuperHero {
+    height: 300px;
+    margin: auto;
+    width: 80%;
+}
